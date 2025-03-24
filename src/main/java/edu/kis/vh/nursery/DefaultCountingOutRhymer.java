@@ -7,7 +7,7 @@ public class DefaultCountingOutRhymer {
     final static int MINUS_ONE =-1;
     private int[] numbers = new int[TABLE_MAX];
 
-    public int total = MINUS_ONE;
+    private int total = MINUS_ONE;
 
     public void countIn(int in) {
         if (!isFull())
