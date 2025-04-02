@@ -1,10 +1,10 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
-    final static int ERROR =-1;
-    final static int TABLE_MAX = 12;
-    final static int ELEVEN = 11;
-    final static int MINUS_ONE =-1;
+    private static final int ERROR =-1;
+    private static final int TABLE_MAX = 12;
+    private static final int ELEVEN = 11;
+    private static final int MINUS_ONE =-1;
     private int[] numbers = new int[TABLE_MAX];
 
     private int total = MINUS_ONE;
