@@ -4,20 +4,26 @@ package edu.kis.vh.nursery;
  * The type Default counting out rhymer.
  */
 public class DefaultCountingOutRhymer {
+
+   /**
+    * The constant representing a full stack.
+    */
+    private static final int ELEVEN = 11;
+  
     /**
      * The constant representing an empty stack.
      */
-    final static int EMPTY = -1;
+    private static final int ERROR =-1;
 
     /**
      * Maximum number of elements that can be stored in the stack
      */
-    final static int TABLE_MAX = 12;
+    private static final int TABLE_MAX = 12;
 
     /**
      * Default value returned when trying to access an empty stack
      */
-    final static int DEFAULT_VALUE = -1;
+    private static final int MINUS_ONE =-1;
 
     /**
      * Internal array storing the elements of the stack
@@ -54,7 +60,7 @@ public class DefaultCountingOutRhymer {
      * @return the boolean
      */
     public boolean isFull() {
-        return total == TABLE_MAX - 1;
+        return total == ELEVEN;
     }
 
     /**

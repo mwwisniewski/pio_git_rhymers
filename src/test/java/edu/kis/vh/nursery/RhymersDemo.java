@@ -3,14 +3,14 @@ package edu.kis.vh.nursery;
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
 
+
 //Projekt jest poprawny, przeszedł pomyślnie 5 na 5 testów
 class RhymersDemo {
-    final static int MAX_COUNT = 15;
-    final static int MAX_COUNT2 = 3;
-    final static int BOUND = 20;
-    final static int ONE = 1;
-    final static int ZERO = 0;
-
+    private static final int MAX_COUNT = 15;
+    private static final int MAX_COUNT2 = 3;
+    private static final int BOUND = 20;
+    private static final int ONE = 1;
+    private static final int ZERO = 0;
 
     public static void main(String[] args) {
         RhymersFactory factory = new DefaultRhymersFactory();
