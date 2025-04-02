@@ -1,39 +1,95 @@
 package edu.kis.vh.nursery;
 
+/**
+ * The type Default counting out rhymer.
+ */
 public class DefaultCountingOutRhymer {
-    private static final int ERROR =-1;
-    private static final int TABLE_MAX = 12;
+
+   /**
+    * The constant representing a full stack.
+    */
     private static final int ELEVEN = 11;
+  
+    /**
+     * The constant representing an empty stack.
+     */
+    private static final int ERROR =-1;
+
+    /**
+     * Maximum number of elements that can be stored in the stack
+     */
+    private static final int TABLE_MAX = 12;
+
+    /**
+     * Default value returned when trying to access an empty stack
+     */
     private static final int MINUS_ONE =-1;
+
+    /**
+     * Internal array storing the elements of the stack
+     */
     private int[] numbers = new int[TABLE_MAX];
 
-    private int total = MINUS_ONE;
+    /**
+     * Index of the last inserted element. Starts at -1, which means the stack is empty
+     */
+    private int total = EMPTY;
 
+    /**
+     * Pushes a value onto the stack if it is not full
+     *
+     * @param in the value to be pushed
+     */
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
+    /**
+     *  Checks whether the stack is empty
+     *
+     * @return the boolean
+     */
     public boolean callCheck() {
-        return total == MINUS_ONE;
+        return total == EMPTY;
     }
 
+    /**
+     * Is full boolean.
+     *
+     * @return the boolean
+     */
     public boolean isFull() {
         return total == ELEVEN;
     }
 
-    protected int peekaboo() {
+    /**
+     *  Returns the value at the top of the stack without removing it
+     *
+     * @return the top value
+     */
+    public int peekaboo() {
         if (callCheck())
-            return MINUS_ONE;
+            return DEFAULT_VALUE;
         return numbers[total];
     }
 
-    public int countOut() {
+    /**
+     * Count out int.
+     *
+     * @return the int
+     */
+    protected int countOut() {
         if (callCheck())
-            return MINUS_ONE;
+            return DEFAULT_VALUE;
         return numbers[total--];
     }
 
+    /**
+     * Returns the index of the last inserted element in the stack
+     *
+     * @return the index of the top element
+     */
     public int getTotal() {
         return total;
     }
